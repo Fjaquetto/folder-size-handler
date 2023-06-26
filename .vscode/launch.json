@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'folder-size-handler'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=folder-size-handler",
+                    "--package=folder-size-handler"
+                ],
+                "filter": {
+                    "name": "folder-size-handler",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'folder-size-handler'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=folder-size-handler",
+                    "--package=folder-size-handler"
+                ],
+                "filter": {
+                    "name": "folder-size-handler",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
